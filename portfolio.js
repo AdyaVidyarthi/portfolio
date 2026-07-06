@@ -9,11 +9,14 @@ document.addEventListener('DOMContentLoaded', function() {
             link.classList.add('active');
         }
     });
-});
 
 const menuToggle=document.getElementById('menuToggle');
 const navLink=document.getElementById('navLinks');
+const profileLink=document.getElementById('profile-link');
 
 menuToggle?.addEventListener('click',() => {
-    navLinks.classList.toggle('active');
-})
+    navLink.classList.toggle('active');
+    profileLink.classList.toggle('active');
+
+});
+});

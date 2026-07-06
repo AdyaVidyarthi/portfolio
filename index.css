@@ -269,6 +269,8 @@ html,body {
     z-index: 99;
   }
   .nav-links.active { display: flex; }
+  .profile-list.active {display: flex;
+  }
 
   .profile-list {
     display: none;
