@@ -10,3 +10,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+const menuToggle=document.getElementById('menuToggle');
+const navLink=document.getElementById('navLinks');
+
+menuToggle?.addEventListener('click',() => {
+    navLinks.classList.toggle('active');
+})
