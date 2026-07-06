@@ -334,7 +334,7 @@ margin: 10px;
 }
 .leetcode-docs a {
    font-weight: 500;
-   color: var(--accent-dark);
+   color: var(--accent);
 }
 .divider {
   
