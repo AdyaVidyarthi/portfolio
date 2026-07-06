@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+  --bg-primary: #0f1720;
+  --bg-secondary: #161f2b;
+  --bg-elevated: #1b2532;
+  --border-color: #263244;
+  --text-primary: #e2e8f0;
+  --text-secondary: #8b98a5;
+  --text-muted: #5c6b7a;
+  --accent: #5eead4;
+  --accent-dark: #2dd4bf;
+  --font-mono: 'Courier New', Courier, monospace;
+  --font-body: 'Segoe UI', system-ui, sans-serif;
+ 
+}
+
+[data-theme="light"] {
+  --bg-primary: #f5f7f9;
+  --bg-secondary: #ffffff;
+  --bg-elevated: #ffffff;
+  --border-color: #dde3ea;
+  --text-primary: #1c2733;
+  --text-secondary: #55636f;
+  --text-muted: #8a97a3;
+  --accent: #0d9488;
+  --accent-dark: #0f766e;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  transition: background var(--transition), color var(--transition);
+  min-height: 100vh;
+}
+
+.navbar {
+    height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 48px;
+  border-bottom: 1px solid var(--border-color);
+  background: var(--bg-primary);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: background var(--transition), border-color var(--transition);
+    box-shadow: 0 0 8px var(--accent);
+}
+
+.logo {
+    font-size: 40px;
+  font-family: var(--font-mono);
+  
+  font-weight: 700;
+  color: var(--accent-dark);
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  font-family: var(--font-mono);
+  font-size: 19px;
+  list-style: none;
+  font-weight: 600;
+}
+
+.nav-links a {
+    text-decoration: none;
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+  padding-bottom: 4px;
+}
+.nav-links a.active {
+color: var(--accent-dark);
+ text-decoration-line: underline;
+ text-decoration-style: solid;
+ text-decoration-color: var(--accent-dark);
+ text-underline-offset: 3px;
+ 
+ text-decoration-thickness: 3px;
+}
+
+.nav-links a.active::after {
+  content:'';
+ 
+ 
+ 
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+  text-decoration:underline;
+  text-decoration-line: solid;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 3px;
+}
+
+
+
+
+.profile-list {
+    list-style: none;
+     display: flex;
+font-family: var(--font-mono);
+gap: 2rem;
+font-size: 14px;
+margin: 30px;
+}
+
+
+.profile-list a {
+    text-decoration: none;
+     color: var(--text-secondary);
+  transition: all 0.3s ease;
+  padding-bottom: 4px;
+    font-size: 25px;
+}
+
+.profile-list a:hover {
+  color: var(--accent);
+ 
+  text-decoration-color: var(--accent);
+
+}
+
+
+.skills-section {
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  
+ 
+}
+
+.skills-heading {
+   margin-top: 100px;
+  margin-left: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+.para {
+   max-width: 600px;
+  color: var(--text-primary);
+  opacity: 0.75;
+  line-height: 1.6;
+  font-size: 1rem;
+  margin-bottom: 3rem;
+}
+
+
+.rings-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.ring-item {
+  text-align: center;
+  flex: 1;
+  min-width: 110px;
+}
+
+.ring-label {
+  font-size: 13px;
+  font-weight: 700;
+  margin-top: 6px;
+  color: var(--text-primary);
+}
+
+.ring-track {
+  fill: none;
+  stroke: var(--bg-elevated);
+  stroke-width: 8;
+}
+
+.ring-progress {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-dasharray: 251.3;
+  stroke-dashoffset: calc(251.3 - (251.3 * var(--pct) / 100));
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  transition: stroke-dashoffset 0.6s ease;
+}
+
+.ring-text {
+  
+  font-size: 18px;
+  font-weight: 700;
+  fill: var(--text-primary);
+  text-anchor: middle;
+}
+
+
+.tech-heading {
+  margin: 5px;
+  color:var(--accent);
+  
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(2,1fr);
+  justify-items: center;
+}
+.category-item {
+  height: 200px;
+  width: 200px;
+  border: 1px solid var(--accent);
+  border-left: 5px solid var(--accent);
+  border-radius: 3px;
+  gap: 10px;
+  margin: 20px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+.category-item:hover {
+   transform: translateY(-3px);
+  box-shadow: 0 3px 6px var(--accent-dark);
+}
+
+
+.card-head {
+  color: var(--text-primary);
+margin: 10px;
+}
+.card-para {
+  display: flex;
+  flex-direction: column;
+}
+.items {
+  color: var(--accent);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  padding: 2px;
+  transition: all 0.3s ease;
+}
+.items:hover {
+   transform: translateY(-3px);
+  box-shadow: 0 3px 16px rgba(0, 0, 0, 0.25);
+}
+
+.c {
+  display: flex;
+
+}
+.c .items {
+  width: 40%;
+  margin: 10px;
+}
+
+.profiles {
+   margin: 20px;
+  color: var(--accent);
+  font-family: 'Playfair Display', serif;
+}
+.coding-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  padding: 5px;
+}
+.leetcode {
+  height: 300px;
+  width: 500px;
+  border: 1px solid var(--accent);
+  margin: 20px;
+  padding: 5px;
+  border-left: 5px solid var(--accent);
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  display: flex
+  justify-content;
+}
+.leetcode:hover {
+   transform: translateY(-6px);
+  box-shadow: 0 8px 12px var(--accent);
+}
+.leetcode p {
+  color: var(--accent);
+margin: 10px;
+}
+
+.leetcode h3 {
+ 
+  margin: 10px;
+  font-size: 30px;
+}
+.details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.detail-items {
+  margin: 10px;
+  padding: 5px;
+}
+.leetcode a {
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.leetcode-docs {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+.leetcode-docs a {
+ 
+  border: 1px solid var(--accent-dark);
+  border-radius: 5px;
+}
+.divider {
+  
+  height: 5px;
+  width: 60vw;
+  background-color: var(--accent-dark);
+}
+.divider2 {
+   height: 5px;
+  width: 200px;
+  background-color: var(--accent-dark);
+}
