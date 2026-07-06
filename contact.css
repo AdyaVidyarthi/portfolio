@@ -161,16 +161,12 @@ margin: 30px;
     border-radius: 10px;
     width: 400px;
     display: flex;
-   
+   transition: all ease 0.3s;
     align-items: center;
     color: var(--text-primary);
     background-color: var(--bg-elevated);
 }
-.infos a {
-    text-decoration: none;
-    color: var(--text-primary);
-     transition: all 0.3s ease;
-}
+
 
 .infos:hover {
     transform: translateY(-6px);
