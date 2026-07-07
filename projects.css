@@ -290,7 +290,7 @@ html,body {
 
   .card {
     max-width: 100%;
-    min-height: auto; /* FIX: was a fixed min-height: 500px — content-driven height avoids empty dead space once the card is narrower and text wraps more */
+    min-height: auto; 
     padding: 16px;
   }
 
