@@ -435,4 +435,22 @@ html,body {
   @media (max-width:480px) {
    .logo { font-size: 22px; }
     .nav-links { font-size: 15px; }
+     .tech-cards {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .number {
+    flex: 1 1 100%; 
+    max-width: 100%;
+  }
+
+  .meta-item {
+    font-size: 0.75rem;
+  }
+
+  .about-me,
+  .education {
+    padding: 16px; 
+  }
 }
