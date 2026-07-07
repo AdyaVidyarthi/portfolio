@@ -134,52 +134,54 @@ margin: 0 30px;
   display: flex;
 align-items: center;
 justify-content: center;
-
+gap: 40px;
+flex-wrap: wrap;
 }
 .about-me {
+  width: 100%;
  max-width: 600px;
-  max-height: 400px;
+   min-height: 400px;
   background-color: var(--bg-secondary);
   display: flex;
   flex-direction: column;
   border-radius: 15px;
   margin: 10px;
-  padding: 10px;
-  position: relative;
-  top: 100px;
+  padding: 20px;
+ 
 }
 .about-section {
   display: flex;
 justify-content: center; 
 flex-direction: column;
-
+padding: 40px 20px;
 }
 .education {
-   width: 600px;
-  height: 400px;
+  width: 100%;
+   max-width: 600px;
+  min-height: 400px;
   background-color: var(--bg-secondary);
   display: flex;
   flex-direction: column;
   border-radius: 15px;
   margin: 10px;
-  padding: 10px;
-    position: relative;
-  top: 100px;
+  padding: 20px;
+   
   
 }
 
 .about-heading {
-  font-size: 30px;
+  font-size: clamp(1.4rem, 3vw, 30px);
   color: var(--accent);
   font-weight: 700;
-  margin: 20px;
+  margin: 20px 0;
   font-family: var(--font-mono);
 }
 .cards {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   margin-top: 30px;
- 
+ flex-wrap: wrap;
+ gap: 16px;
 }
 .tech-cards:hover {
   transform: translateY(-4px);
@@ -187,7 +189,7 @@ flex-direction: column;
 }
 .tech-cards {
 font-weight: 500;
-  width: 150px;
+  width: 130px;
   color: var(--accent-dark);
   font-family: var(--font-body);
   background-color: var(--bg-elevated);
@@ -196,35 +198,38 @@ font-weight: 500;
   padding: 8px;
    transition: all 0.3s ease;
    border: 1.5px solid var(--border-color);
-
+text-align: center;
 }
 
 
 .details {
   background-color: var(--bg-elevated);
-  width: 80%;
+  width: 100%;
   border-radius: 5px;
-  margin-left: 20px;
+
   padding: 10px;
 }
 .education-heading {
-   font-size: 30px;
+   font-size: clamp(1.4rem, 3vw, 30px);
   color: var(--accent);
   font-weight: 700;
-  margin: 20px;
+  margin: 20px 0;
   font-family: var(--font-mono);
 }
 .sub-heading {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 .circle {
   border-radius: 50%;
   background-color: var(--accent-dark);
   height: 12px;
   width: 15px;
+  min-width: 12px;
   box-shadow: 0 0 5px var(--accent);
-  margin-bottom: 35px;
+  flex-shrink: 0;
 }
 .college {
   display: flex;
@@ -234,27 +239,31 @@ font-weight: 500;
 .college-heading {
   color: var(--text-primary);
   font-family: var(--font-mono);
-  font-size: 20px;
+  font-size: clamp(16px, 2.5vw, 20px);
   margin: 10px;
   margin-bottom: 3px;
-  padding: 5px;
+  padding: 5px 0;
   font-weight: 700;
 
 }
 .college-details {
   color: var(--accent-dark);
-  margin-left: 20px;
+  margin-left: 0;
   font-weight: 600;
+  font-size: 0.9rem;
 }
 
 .education-details p {
-  margin: 10px;
-  padding: 10px;
+  margin: 10px 0;
+  padding: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
 .meta-row {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .meta-item {
@@ -264,7 +273,7 @@ font-weight: 500;
   color: var(--text-primary);
   font-size: 0.8rem;
   font-weight: 600;
-  margin: 15px;
+  
 }
 .meta-item a {
   text-decoration: none;
@@ -275,23 +284,28 @@ font-weight: 500;
 .meta-icon {
   width: 14px;
   height: 14px;
+  min-width: 14px;
   color: var(--accent-dark);
 }
 
 .details-card {
   display: flex;
- position: relative;
- top: 150px;
+  flex-wrap: wrap;
  justify-content: center;
  align-items: center;
+ gap: 16px;
+ margin: 40px 0;
 }
 .number {
    background-color: var(--bg-secondary);
   border-radius: 5px;
-  width: 250px;
-  margin: 8px;
+  width: 200px;
+  flex: 1 1 200px;
+  max-width: 250px;
+  min-height: 110px;
+  text-align: center;
   padding: 10px;
-  height: 125px;
+  justify-content: center;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -307,10 +321,11 @@ transform: all 0.5s ease;
   color: var(--accent-dark);
   font-family: var(--font-body);
   font-weight: 900;
-  font-size: 40px;
+  font-size: clamp(1.8rem, 4vw, 40px);
 }
 .number-detail {
   margin-bottom: 5px;
+  font-size: 0.9rem;
 }
 
 html,body {
@@ -351,11 +366,71 @@ html,body {
   .profile-list {
     display: none;
   }
+   
+  .about-section {
+    padding: 24px 16px;
+  }
 
   .about-details {
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .about-me,
+  .education {
+    width: 100%;
+    max-width: 500px;
+    min-height: auto;
+    margin: 0;
+  }
+
+  .about-heading,
+  .education-heading {
+    text-align: center; 
+  }
+
+  .cards {
+    justify-content: center;
+    gap: 10px; 
+  }
+
+  .tech-cards {
+    width: 45%;
+    flex: 1 1 45%;
+  }
+
+  .sub-heading {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .college-details,
+  .education-details p {
+    text-align: center; 
+  }
+
+  .meta-row {
+    flex-direction: column; 
+    align-items: center;
+    gap: 10px;
+  }
+
+  .details-card {
+    margin: 24px 0; 
+    gap: 12px;
+  }
+
+  .number {
+    flex: 1 1 45%; 
+    max-width: 45%;
+    min-height: 100px;
   }
 }
+
+ 
+
 
   @media (max-width:480px) {
    .logo { font-size: 22px; }
