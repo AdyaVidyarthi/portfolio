@@ -293,19 +293,9 @@ html,body {
   .profile-img { width: 200px; height: 200px; }
 
  
-  .container,
-  .section-container,
-  .page-content {
-    padding: 24px;
-  }
 
-  .grid,
-  .card-grid,
-  .skills-grid,
-  .projects-grid,
-  .achievements-grid {
-    grid-template-columns: 1fr !important;
-  }
+
+ 
 }
 
 @media (max-width:480px) {
