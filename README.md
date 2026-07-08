@@ -25,6 +25,5 @@ cd portfolio
 Open index.html in your browser, or visit the live demo link above.
 
 ## Upcoming Features
-- [ ] Dark mode toggle
+- [ ] Direct message portal
 - [ ] Project filtering
-- [ ] Animations/transitions
