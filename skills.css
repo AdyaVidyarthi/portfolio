@@ -141,12 +141,13 @@ margin: 0 30px;
 }
 
 .skills-heading {
-   margin-top: 100px;
-  margin-left: 20px;
+   margin-top: 60px;
+  margin-left: 0;
   font-weight: 700;
   color: var(--text-primary);
-  font-size: 3rem;
+  font-size: clamp(1.8rem,5vw,3rem);
   margin-bottom: 10px;
+  text-align: center;
 }
 .para {
    max-width: 600px;
@@ -155,13 +156,16 @@ margin: 0 30px;
   line-height: 1.6;
   font-size: 1rem;
   margin-bottom: 3rem;
+  padding: 0 16px;
+  text-align: center;
+
 }
 
 
 .rings-row {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
   margin-bottom: 20px;
@@ -172,6 +176,7 @@ margin: 0 30px;
   text-align: center;
   flex: 1;
   min-width: 110px;
+  max-width: 140px;
 }
 
 .ring-label {
@@ -211,6 +216,8 @@ margin: 0 30px;
 .tech-heading {
   margin: 5px;
   color:var(--accent);
+  text-align: center;
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
   
 }
 
@@ -219,16 +226,22 @@ margin: 0 30px;
   grid-template-columns: repeat(2,1fr);
   grid-template-rows: repeat(2,1fr);
   justify-items: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
 .category-item {
-  height: 200px;
-  width: 200px;
+  height: auto;
+  width: 100%;
+  min-height: 180px;
   border: 1px solid var(--accent);
   border-left: 5px solid var(--accent);
   border-radius: 3px;
   gap: 10px;
   margin: 20px;
-  padding: 10px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
   transition: all 0.3s ease;
@@ -241,22 +254,25 @@ margin: 0 30px;
 
 .card-head {
   color: var(--text-primary);
-margin: 10px;
+margin: 0 0 8px;
+font-size: 1.1rem;
 }
 .card-para {
   display: flex;
   flex-direction: column;
+  gap: 8px;
 }
 .items {
   color: var(--accent);
   border: 1px solid var(--border-color);
   border-radius: 5px;
-  width: 60%;
+  width: auto;
   display: flex;
   justify-content: center;
   margin: 10px;
-  padding: 2px;
+  padding: 4px 12px;
   transition: all 0.3s ease;
+  font-size: 0.85rem;
 }
 .items:hover {
    transform: translateY(-3px);
@@ -265,17 +281,21 @@ margin: 10px;
 
 .c {
   display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 
 }
 .c .items {
-  width: 40%;
-  margin: 10px;
+  width: auto;
+  margin: 0;
 }
 
 .profiles {
-   margin: 20px;
+   margin: 20px 0;
   color: var(--accent);
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-body);
+  text-align: center;
+  font-size: 1.3rem;
 }
 .coding-profile {
   display: flex;
@@ -285,16 +305,18 @@ margin: 10px;
   padding: 5px;
 }
 .leetcode {
-  height: 300px;
-  width: 500px;
+  height: auto;
+  width: 100%;
+  max-width: 500px;
   border: 1px solid var(--accent);
   margin: 20px;
-  padding: 5px;
+  padding: 16px;
   border-left: 5px solid var(--accent);
   border-radius: 3px;
   transition: all 0.3s ease;
-  display: flex
-  justify-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .leetcode:hover {
    transform: translateY(-6px);
@@ -302,22 +324,26 @@ margin: 10px;
 }
 .leetcode p {
   color: var(--accent);
-margin: 10px;
+margin: 0 0 8px;
 }
 
 .leetcode h3 {
  
   margin: 10px;
-  font-size: 30px;
+  font-size: clamp(1.3rem,3vw,30px);
 }
 .details {
   display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 10px;
   justify-content: space-between;
   align-items: center;
 }
 .detail-items {
-  margin: 10px;
+  margin: 0;
   padding: 5px;
+  text-align: center;
 }
 .leetcode a {
   color: var(--text-primary);
@@ -326,8 +352,10 @@ margin: 10px;
 }
 .leetcode-docs {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   margin-top: 10px;
+  gap: 8px;
 }
 .leetcode-docs a {
    font-weight: 500;
@@ -337,12 +365,16 @@ margin: 10px;
   
   height: 5px;
   width: 60vw;
+  max-width: 300px;
   background-color: var(--accent-dark);
+  margin: 0 auto;
 }
 .divider2 {
    height: 5px;
   width: 200px;
+  max-width: 90%;
   background-color: var(--accent-dark);
+  margin: 0 auto;
 }
 
 html,body {
@@ -385,10 +417,51 @@ html,body {
     display: none;
   }
 
+   .skills-heading {
+    margin-top: 30px;
+  }
+
+  .rings-row {
+    gap: 16px;
+  }
+
+  .ring-item {
+    min-width: 90px;
+  }
+
+  .category-grid {
+    grid-template-columns: 1fr; /* FIX: collapses to a single column on mobile instead of squeezing 2 columns */
+    grid-template-rows: none;
+  }
+
+  .leetcode {
+    margin: 10px;
+    padding: 16px;
+  }
+
+  .details {
+    gap: 16px;
+  }
+
  
 }
 
   @media (max-width:480px) {
    .logo { font-size: 22px; }
     .nav-links { font-size: 15px; }
+     .skills-heading {
+    font-size: 1.6rem;
+  }
+
+  .ring-item {
+    min-width: 80px;
+  }
+
+  .category-item {
+    padding: 12px;
+  }
+
+  .leetcode h3 {
+    font-size: 1.4rem;
+  }
 }
