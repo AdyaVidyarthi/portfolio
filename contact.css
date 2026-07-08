@@ -219,6 +219,8 @@ margin: 40px 0;
     display: flex;
    flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
     color: var(--text-primary);
     background-color: var(--bg-elevated);
   }
@@ -226,7 +228,7 @@ margin: 40px 0;
     display: flex;
     align-items: center;
     gap: 8px;
-    margin-bottom: 8px;
+    margin-bottom: 0;
     text-align: center;
   }
   .circle {
@@ -246,13 +248,13 @@ margin: 40px 0;
   }
   .para {
     color: var(--text-muted);
-    margin: 80px 0;
+    margin: 0;
     text-align: center;
     font-size: 0.9rem;
 
   }
   .para2 {
-    margin: 8px 0;
+    margin: 0 0 8px;
     text-align: center;
     font-size: 0.9rem;
   }
