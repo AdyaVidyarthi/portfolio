@@ -2,7 +2,7 @@
 
 A multi-page personal portfolio site showcasing my background, skills, projects, and achievements — built with HTML, CSS, and JavaScript.
 
-🔗 *Live Demo:* https://adyavidyarthi.github.io/portfolio/
+🔗 *Live Demo:* https://portfolio-ten-alpha-60.vercel.app/
 
 ## Pages
 - *Home* — Landing page / intro
@@ -17,12 +17,6 @@ A multi-page personal portfolio site showcasing my background, skills, projects,
 - CSS3
 - Vanilla JavaScript
 
-## Getting Started
-\\\`bash
-git clone https://github.com/AdyaVidyarthi/portfolio.git
-cd portfolio
-\\\`
-Open index.html in your browser, or visit the live demo link above.
 
 ## Upcoming Features
 - [ ] Direct message portal
