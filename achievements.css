@@ -316,6 +316,9 @@ margin: 0 auto 20px;
   gap: 8px;
   margin-top: 12px;
 }
+.certi-links2 a {
+  cursor: not-allowed;
+}
 
 html,body {
   overflow-x: hidden;
