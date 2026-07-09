@@ -132,11 +132,10 @@ margin: 0 30px;
 }
 .achievement-heading {
   color: var(--text-primary);
-  position: relative;
-  left: 30px;
-  font-size: 30px;
-  margin: 10px;
-  top: 70px;
+ margin: 40px 0 10px;
+  font-size: clamp(1.8rem,5vw,30px);
+  text-align: center;
+  
 }
 .achievements {
   display: flex;
@@ -146,62 +145,65 @@ margin: 0 30px;
   
 }
 .achievements-details {
-  width: 80%;
+  width: 100%;
+  max-width: 1000px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  padding: 0 16px;
 
 }
 .divider1 {
-  width: 400px;
+  width: min(400px,80%);
   height: 5px;
   background-color: var(--accent-dark);
+  margin: 0 auto 20px;
 }
 
 .card {
   background-color: var(--bg-elevated);
-  width: 400px;
-  height: 150px;
+  width: 100%;
+  min-height: 150px;
   border-radius: 10px;
-  margin: 10px;
-  padding: 5px;
-  position: relative;
-  top: 100px;
+  padding: 28px;
 }
 
 .achieve-cards {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3,minmax(220px,1fr));
+  gap: 32px;
+  width: 100%;
+  margin: 40px 0;
 }
 .card-heading {
-  margin: 15px;
-  margin-bottom: 3px;
-  padding: 2px;
+  margin: 0 0 6px;
+  padding: 0;
   color: var(--accent);
-  font-size: 30px;
+  font-size: clamp(1.2rem,3vw,30px);
   font-weight: 500;
 }
 .detail {
-  margin: 15px;
-  margin-top: 0;
-  padding: 2px;
+  margin: 0 0 12px;
+  padding: 0;
   color: var(--text-primary);
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 .link1 {
   border:solid 0.8px rgb(168, 16, 168);
   border-radius: 10px;
-  padding: 3px;
-  width: 80px;
-  margin: 15px;
-  margin-top: 0;
-  
-  transition: all ease 0.3s;
-  
-  
-}
+  padding: 6px 10px;
+  width: fit-content;
+  display: inline-block;
+  margin: 12px 0 0;
+   transition: all ease 0.3s;
+  }
+
 .link1:hover {
   transform: translateY(-2px);
   box-shadow: 0 0 4px rgb(207, 81, 207);
 }
+
 .linkone {
  color: rgb(168, 16, 168);
   font-weight: 650;
@@ -221,20 +223,19 @@ transform: translateY(-2px);
 .link2 {
    border:solid 0.8px rgb(23, 89, 181);
   border-radius: 10px;
-  padding: 3px;
-  width: 80px;
-  margin: 15px;
-  margin-top: 0;
-  
+  padding: 6px 10px;
+  width: fit-content;
+  display: inline-block;
+  margin: 12px 0 0;
   transition: all ease 0.3s;
 }
 .link3 {
     border:solid 0.8px rgb(34, 131, 34);
   border-radius: 10px;
-  padding: 3px;
-  width: 80px;
-  margin: 15px;
-  margin-top: 0;
+  padding: 6px 10px;
+  width: fit-content;
+  display: inline block;
+  margin: 12px 0 0;
   transition: all 0.3s ease;
 }
 
@@ -253,42 +254,47 @@ transform: translateY(-2px);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 80%;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
 .certi-heading h1 {
    color: var(--text-primary);
-  position: relative;
-  left: 30px;
-  font-size: 50px;
-  margin: 10px;
-  top: 150px;
+   font-size: clamp(1.8rem,5vw,50px);
+  margin: 60px 0 10px;
+  text-align: center;
 }
 .divider2 {
-   width: 350px;
+   width:min(350px,80%);
   height: 5px;
   background-color: var(--accent-dark);
-  position: relative;
-  top: 150px;
-  left: 40px;
+margin: 0 auto 20px;
 }
 .certi-details {
   display: flex;
-  justify-content: space-evenly;
-  position: relative;
-  top: 200px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+ gap: 20px;
+ width: 100%;
+ margin-top: 20px;
 
 }
 .certi-cards {
-  margin: 10px;
-  padding: 5px;
+  margin: 0;
+  padding: 16px;
   border-radius: 10px;
   background-color: var(--bg-elevated);
-   width: 400px;
-  height: 210px;
-  margin-bottom: 20px;
+   width: 100%;
+   max-width: 380px;
+   min-height: 210px;
 }
 .certi-links {
   display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
 
 }
 .circle {
@@ -296,9 +302,9 @@ transform: translateY(-2px);
   background-color: var(--accent-dark);
   height: 12px;
   width: 13px;
+  min-width: 12px;
   box-shadow: 0 0 5px var(--accent);
-  margin: 15px;
- margin-top: 6px;
+  flex-shrink: 0;
 }
 .cert1 {
   text-decoration: none;
@@ -306,8 +312,9 @@ transform: translateY(-2px);
 }
 .certi-links2{
   display: flex;
-  position: relative;
-  top: 40px;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
 }
 
 html,body {
@@ -333,7 +340,7 @@ html,body {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .theme-toggle:hover {
@@ -372,10 +379,50 @@ html,body {
     display: none;
   }
 
+    .achievement-heading {
+    margin: 24px 0 10px;
+  }
+
+  .achieve-cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .card {
+    
+    padding: 14px;
+  }
+
+  .certi-heading h1 {
+    margin: 40px 0 10px;
+  }
+
+  .certi-details {
+    gap: 16px;
+    margin-top: 10px;
+  }
+
+  .certi-cards {
+    max-width: 100%;
+    min-height: auto;
+    padding: 14px;
+  }
+
  
 }
 
   @media (max-width:480px) {
    .logo { font-size: 22px; }
     .nav-links { font-size: 15px; }
+     .achievement-heading {
+    font-size: 1.5rem;
+  }
+
+  .card-heading {
+    font-size: 1.1rem;
+  }
+
+  .link1, .link2, .link3 {
+    padding: 6px 8px;
+  }
 }
